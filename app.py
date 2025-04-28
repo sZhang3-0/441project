@@ -94,7 +94,7 @@ if file is not None:
         st.success("Done!")
         n_frauds = int(results_df["prediction"].sum())
         n_total  = len(results_df)
-         st.metric("Predicted frauds", f"{n_frauds:,}")
+        st.metric("Predicted frauds", f"{n_frauds:,}")
         st.subheader("Flagged transactions")
         fraud_rows = results_df.loc[
             results_df["prediction"] == 1,
