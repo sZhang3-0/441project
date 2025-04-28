@@ -102,6 +102,13 @@ if file is not None:
             results_df = run_inference(file.getvalue())
 
         st.success("Done!")
+        n_frauds = int(results_df["prediction"].sum())
+        n_total  = len(results_df)
+        st.metric("Predicted frauds", f"{n_frauds:,}",
+        delta=f"{n_frauds / n_total:.2%} of {n_total:,} transactions")
+
+        # keep the first-20 preview
+        st.dataframe(results_df[["prediction"]].head(20))
         st.dataframe(results_df[["prediction"]].head(20))
 
 
