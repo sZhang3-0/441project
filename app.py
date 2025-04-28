@@ -50,7 +50,7 @@ def align_columns(df: pd.DataFrame, required_cols: np.ndarray) -> pd.DataFrame:
 
 
 st.set_page_config(page_title="Fraud‑Detection", layout="wide")
-st.title("\U0001F50E Credit Card Fraud Detection")
+st.title("Credit Card Fraud Detection")
 
 
 @st.cache_resource(show_spinner=True)
