@@ -74,7 +74,7 @@ else:
 
 st.divider()
 
-# ---- File upload + predict button ----
+
 file = st.file_uploader("Upload transactions as CSV", type=["csv"])
 
 def run_inference(uploaded_bytes: bytes):
@@ -114,5 +114,5 @@ if file is not None:
 
 
 else:
-    st.info("⬆️  Upload a CSV file to enable the Predict button.")
+    st.info("Upload a CSV file")
 
