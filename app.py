@@ -7,7 +7,7 @@ import io
 import tempfile
 
 
-MODEL_BUNDLE_PATH = Path("/content/drive/MyDrive/Model/fraud_logreg.pkl") 
+MODEL_BUNDLE_PATH = Path("fraud_logreg.pkl") 
 
 
 def load_bundle(path: Path):
