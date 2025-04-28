@@ -6,14 +6,10 @@ import joblib
 import io
 import tempfile
 
-###############################################################################
-# Configuration
-###############################################################################
-MODEL_BUNDLE_PATH = Path("/content/drive/MyDrive/Model/fraud_logreg.pkl")  # adjust if deployed elsewhere
 
-###############################################################################
-# Utilities
-###############################################################################
+MODEL_BUNDLE_PATH = Path("fraud_logreg.pkl")
+
+
 
 def load_bundle(path: Path):
     if not path.exists():
@@ -49,7 +45,6 @@ def align_columns(df: pd.DataFrame, required_cols: np.ndarray) -> pd.DataFrame:
         if col not in df.columns:
             df[col] = 0
 
-    # Re‑order
     df = df[required_cols]
     return df
 
@@ -79,7 +74,7 @@ else:
 
 st.divider()
 
-# ---- File upload + predict button ----
+
 file = st.file_uploader("Upload transactions as CSV", type=["csv"])
 
 def run_inference(uploaded_bytes: bytes):
