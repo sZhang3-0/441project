@@ -63,17 +63,7 @@ cutoff = bundle["cutoff"]
 auc_train = bundle.get("auc_train")
 
 
-'''
-cols = st.columns(3 if auc_train else 2)
 
-if auc_train is not None:
-    cols[1].metric("Training AUC", f"{auc_train:.3f}")
-    cols[2].metric("Probability cutoff", f"{cutoff:.3f}")
-else:
-    cols[1].metric("Probability cutoff", f"{cutoff:.3f}")
-
-st.divider()
-'''
 
 file = st.file_uploader("Upload transactions as CSV", type=["csv"])
 
