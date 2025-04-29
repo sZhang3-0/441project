@@ -8,3 +8,11 @@ The goal of this project is to develop a web app to
 detect fraud transactions. The final product will 
 be accurate, scalable and adaptable to the changing 
 fraud patterns
+
+##Extra Pakages Needed
+
+streamlit>=1.25
+pandas>=2.0
+numpy>=1.23
+scikit-learn>=1.3
+joblib>=1.2
